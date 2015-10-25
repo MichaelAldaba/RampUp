@@ -9,3 +9,18 @@ Spock > scissors, rock
 
 require_relative 'computer.rb'
 require_relative 'player.rb'
+
+WEAPONS = ["rock", "paper", "scissors", "lizard", "spock"]
+
+class Game
+	attr_accessor
+	attr_reader :computer, :player
+
+	def initialize
+		@computer = Computer.new
+		@player = Player.new
+	end
+
+end
+
+Game.new
