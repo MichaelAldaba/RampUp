@@ -1,8 +1,5 @@
-WEAPONS = ["rock", "paper", "scissors", "lizard", "Spock"]
-
 class Computer
-	attr_accessor :score
-	attr_reader :weapon
+	attr_accessor :score, :weapon
 
 	def initialize
 		@weapon = WEAPONS.sample
