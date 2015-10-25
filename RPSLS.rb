@@ -7,4 +7,5 @@ lizard > Spock, paper
 Spock > scissors, rock
 =end
 
-
+require_relative 'computer.rb'
+require_relative 'player.rb'
