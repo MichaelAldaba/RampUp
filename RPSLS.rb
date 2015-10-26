@@ -16,7 +16,7 @@ class Game
 		puts "\n-------------------------------------"
 		puts "You: #{player.score}".ljust(26) + "Computer: #{computer.score}"
 		puts "-------------------------------------"
-		sleep(2)
+		sleep(1)
 
 		player.score == 4 || computer.score == 4 ? game_over : start
 	end
