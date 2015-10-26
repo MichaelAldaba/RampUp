@@ -5,4 +5,9 @@ class Computer
 		@weapon = WEAPONS.sample
 		@score = 0
 	end
+
+	def win
+		puts "You lose the round."
+		self.score += 1
+	end
 end

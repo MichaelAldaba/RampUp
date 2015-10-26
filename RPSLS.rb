@@ -44,60 +44,50 @@ class Game
 		when "rock"
 			if computer.weapon == "scissors" || computer.weapon == "lizard"
 				puts "\nRock crushes #{computer.weapon}."
-				win
+				player.win
 			else
 				computer.weapon == "paper" ? (puts "\nPaper covers rock.") : (puts "\nSpock vaporizes rock.")
-				lose
+				computer.win
 			end
 		when "paper"
 			if computer.weapon == "rock" || computer.weapon == "spock"
 				computer.weapon == "rock" ? (puts "\nPaper covers rock.") : (puts "\nPaper disproves Spock.")
-				win
+				player.win
 			else
 				computer.weapon == "scissors" ? (puts "\nScissors cut paper.") : (puts "\nLizard eats paper.")
-				lose
+				computer.win
 			end
 		when "scissors"
 			if computer.weapon == "paper" || computer.weapon == "lizard"
 				computer.weapon == "paper" ? (puts "\nScissors cut paper.") : (puts "\nScissors decapitate lizard.")
-				win
+				player.win
 			else
 				computer.weapon == "rock" ? (puts "\nRock crushes scissors.") : (puts"\nSpock smashes scissors.")
-				lose
+				computer.win
 			end
 		when "lizard"
 			if computer.weapon == "paper" || computer.weapon == "spock"
 				computer.weapon == "paper" ? (puts "\nLizard eats paper.") : (puts "\nLizard poisons Spock.")
-				win
+				player.win
 			else
 				computer.weapon == "rock" ? (puts "\nRock crushes lizard.") : (puts "\nScissors decapitate lizard.")
-				lose
+				computer.win
 			end
 		when "spock"
 			if computer.weapon == "rock" || computer.weapon == "scissors"
 				computer.weapon == "rock" ? (puts "\nSpock vaporizes rock.") : (puts "\nSpock smashes scissors.")
-				win
+				player.win
 			else
 				computer.weapon == "paper" ? (puts "\nPaper disproves Spock.") : (puts "\nLizard poisons Spock.")
-				lose
+				computer.win
 			end
 		end
+
+		restart
 	end
 
 	def tie
 		puts "\nThe round is tied."
-		restart
-	end
-
-	def win
-		puts "You win the round."
-		player.score += 1
-		restart
-	end
-
-	def lose
-		puts "You lose the round."
-		computer.score += 1
 		restart
 	end
 
