@@ -23,12 +23,11 @@ class Game
 
 	def start
 		while true
-			puts "\nrock, paper, scissors, lizard, spock?"
-			input = gets.chomp.downcase
-			break if WEAPONS.include?(input)
+			puts "\nRock, paper, scissors, lizard, Spock?"
+			player.weapon = gets.chomp.downcase
+			break if WEAPONS.include?(player.weapon)
 		end
 
-		player.weapon = input
 		show_weapons
 	end
 
