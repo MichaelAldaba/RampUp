@@ -7,7 +7,7 @@ class Computer
 	end
 
 	def win
-		puts "You lose the round."
+		puts "Computer wins the round."
 		self.score += 1
 	end
 end

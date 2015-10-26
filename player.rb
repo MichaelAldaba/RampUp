@@ -7,7 +7,7 @@ class Player
 	end
 
 	def win
-		puts "You win the round."
+		puts "Player wins the round."
 		self.score += 1
 	end
 end

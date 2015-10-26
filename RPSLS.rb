@@ -14,7 +14,7 @@ class Game
 
 	def show_score
 		puts "\n-------------------------------------"
-		puts "You: #{player.score}".ljust(26) + "Computer: #{computer.score}"
+		puts "Player: #{player.score}".ljust(26) + "Computer: #{computer.score}"
 		puts "-------------------------------------"
 		sleep(1)
 
@@ -32,7 +32,7 @@ class Game
 	end
 
 	def show_weapons
-		puts "\nYou:".ljust(11) + "#{player.weapon}"
+		puts "\nPlayer:".ljust(11) + "#{player.weapon}"
 		puts "Computer: #{computer.weapon}"
 		sleep(2)
 
@@ -98,7 +98,7 @@ class Game
 	end
 
 	def game_over
-		player.score == 4 ? (puts "\nYou won the match!") : (puts "\nYou lost the match!")
+		player.score == 4 ? (puts "\nPlayer wins the match!") : (puts "\nComputer wins the match!")
 	end
 
 end
