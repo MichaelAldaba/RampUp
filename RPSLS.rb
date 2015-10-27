@@ -18,10 +18,10 @@ class Game
 		puts "-------------------------------------"
 		sleep(1)
 
-		player.score == 4 || computer.score == 4 ? game_over : start
+		player.score == 4 || computer.score == 4 ? game_over : game_start
 	end
 
-	def start
+	def game_start
 		while true
 			puts "\nRock, paper, scissors, lizard, Spock?"
 			player.weapon = gets.chomp.downcase
@@ -100,7 +100,6 @@ class Game
 	def game_over
 		player.score == 4 ? (puts "\nPlayer wins the match!") : (puts "\nComputer wins the match!")
 	end
-
 end
 
 Game.new
