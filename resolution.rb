@@ -11,3 +11,4 @@ class Resolution
 		"rock" <=> "paper"
 		"paper" <=> "scissors"
 	end
+end
