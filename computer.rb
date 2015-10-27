@@ -2,8 +2,12 @@ class Computer
 	attr_accessor :score, :weapon
 
 	def initialize
-		@weapon = WEAPONS.sample
+		@weapon = ""
 		@score = 0
+	end
+
+	def choose
+		self.weapon = WEAPONS.sample
 	end
 
 	def win

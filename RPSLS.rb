@@ -23,6 +23,7 @@ class Game
 
 	def game_start
 		player.choose
+		computer.choose
 		show_weapons
 	end
 
@@ -88,7 +89,6 @@ class Game
 
 	def restart
 		sleep(2)
-		computer.weapon = WEAPONS.sample
 		show_score
 	end
 
