@@ -22,8 +22,8 @@ class Game
 	end
 
 	def game_start
-		player.choose
-		computer.choose
+		player.chooses
+		computer.chooses
 		show_weapons
 	end
 
@@ -40,42 +40,42 @@ class Game
 		when "rock"
 			if computer.weapon == "scissors" || computer.weapon == "lizard"
 				puts "\nRock crushes #{computer.weapon}."
-				player.win
+				player.wins
 			else
 				computer.weapon == "paper" ? (puts "\nPaper covers rock.") : (puts "\nSpock vaporizes rock.")
-				computer.win
+				computer.wins
 			end
 		when "paper"
 			if computer.weapon == "rock" || computer.weapon == "spock"
 				computer.weapon == "rock" ? (puts "\nPaper covers rock.") : (puts "\nPaper disproves Spock.")
-				player.win
+				player.wins
 			else
 				computer.weapon == "scissors" ? (puts "\nScissors cut paper.") : (puts "\nLizard eats paper.")
-				computer.win
+				computer.wins
 			end
 		when "scissors"
 			if computer.weapon == "paper" || computer.weapon == "lizard"
 				computer.weapon == "paper" ? (puts "\nScissors cut paper.") : (puts "\nScissors decapitate lizard.")
-				player.win
+				player.wins
 			else
 				computer.weapon == "rock" ? (puts "\nRock crushes scissors.") : (puts"\nSpock smashes scissors.")
-				computer.win
+				computer.wins
 			end
 		when "lizard"
 			if computer.weapon == "paper" || computer.weapon == "spock"
 				computer.weapon == "paper" ? (puts "\nLizard eats paper.") : (puts "\nLizard poisons Spock.")
-				player.win
+				player.wins
 			else
 				computer.weapon == "rock" ? (puts "\nRock crushes lizard.") : (puts "\nScissors decapitate lizard.")
-				computer.win
+				computer.wins
 			end
 		when "spock"
 			if computer.weapon == "rock" || computer.weapon == "scissors"
 				computer.weapon == "rock" ? (puts "\nSpock vaporizes rock.") : (puts "\nSpock smashes scissors.")
-				player.win
+				player.wins
 			else
 				computer.weapon == "paper" ? (puts "\nPaper disproves Spock.") : (puts "\nLizard poisons Spock.")
-				computer.win
+				computer.wins
 			end
 		end
 

@@ -6,7 +6,7 @@ class Player
 		@score = 0
 	end
 
-	def choose
+	def chooses
 		while true
 			puts "\nRock, paper, scissors, lizard, Spock?"
 			self.weapon = gets.chomp.downcase
@@ -14,7 +14,7 @@ class Player
 		end
 	end
 
-	def win
+	def wins
 		puts "Player wins the round."
 		self.score += 1
 	end

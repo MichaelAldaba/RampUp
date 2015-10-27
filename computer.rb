@@ -6,11 +6,11 @@ class Computer
 		@score = 0
 	end
 
-	def choose
+	def chooses
 		self.weapon = WEAPONS.sample
 	end
 
-	def win
+	def wins
 		puts "Computer wins the round."
 		self.score += 1
 	end
