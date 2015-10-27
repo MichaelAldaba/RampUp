@@ -22,12 +22,7 @@ class Game
 	end
 
 	def game_start
-		while true
-			puts "\nRock, paper, scissors, lizard, Spock?"
-			player.weapon = gets.chomp.downcase
-			break if WEAPONS.include?(player.weapon)
-		end
-
+		player.choose
 		show_weapons
 	end
 
