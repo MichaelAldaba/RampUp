@@ -6,19 +6,19 @@ puts name and year of birth
 =end
 
 def input_name_age
-	puts "\nWhat is your name?"
-	name = gets.chomp.capitalize
+	age, input = 0, nil
 
-	age = 0
+	puts "\nWhat is your first name?"
+	name = gets.chomp.split(" ")[0].capitalize
+
 	until age > 0
 		puts "\nWhat is your age?"
 		age = gets.chomp.to_i
 	end
 
-	input = nil
 	until input == "yes" || input == "no"
 		puts "\nDid you celebrate your birthday this year? Yes or no?"
-		input = gets.chomp
+		input = gets.chomp.downcase
 	end
 
 	input == "yes" ? input = 0 : input = 1
