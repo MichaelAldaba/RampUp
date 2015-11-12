@@ -9,8 +9,11 @@ def input_name_age
 	puts "\nWhat is your name?"
 	name = gets.chomp.capitalize
 
-	puts "\nWhat is your age?"
-	age = gets.chomp.to_i
+	age = 0
+	until age > 0
+		puts "\nWhat is your age?"
+		age = gets.chomp.to_i
+	end
 
 	input = nil
 	until input == "yes" || input == "no"
