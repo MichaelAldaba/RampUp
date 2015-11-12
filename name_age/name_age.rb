@@ -12,13 +12,16 @@ def input_name_age
 	puts "\nWhat is your age?"
 	age = gets.chomp.to_i
 
-	puts "\nDid you celebrate your birthday this year? Yes or no?"
-	input = gets.chomp
+	input = nil
+	until input == "yes" || input == "no"
+		puts "\nDid you celebrate your birthday this year? Yes or no?"
+		input = gets.chomp
+	end
 
 	if input == "yes"
-		puts "#{name} was born in #{Time.now.year - age}"
+		puts "\n#{name} was born in #{Time.now.year - age}"
 	else
-		puts "#{name} was born in #{Time.now.year - 1 - age}"
+		puts "\n#{name} was born in #{Time.now.year - 1 - age}"
 	end
 end
 
