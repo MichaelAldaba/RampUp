@@ -21,11 +21,9 @@ def input_name_age
 		input = gets.chomp
 	end
 
-	if input == "yes"
-		puts "\n#{name} was born in #{Time.now.year - age}"
-	else
-		puts "\n#{name} was born in #{Time.now.year - 1 - age}"
-	end
+	input == "yes" ? input = 0 : input = 1
+
+	puts "\n#{name} was born in #{Time.now.year - input - age}"
 end
 
 input_name_age
